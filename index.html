@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <title>青鲤锦时</title>
+  <meta name="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
+</head>
+<style>
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  overflow: hidden;
+  height: 100%;
+}
+
+body {
+  min-width: 1000px;
+  font-family: -apple-system,
+  blinkmacsystemfont,
+  "segoe ui", roboto,
+  "helvetica neue", helvetica,
+  "pingfang sc", "hiragino sans gb", "microsoft yahei",
+  simsun, sans-serif;
+  background: #000;
+}
+
+h1,
+h2 {
+  font-weight: normal;
+}
+
+ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+a {
+  color: #4f6680;
+  text-decoration: none;
+  transition: color .3s ease-in-out;
+  cursor: pointer;
+}
+
+a:hover {
+  color: #8e9a9a;
+}
+
+#app {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  color: #000;
+  font-family: "avenir", helvetica, arial, sans-serif;
+  text-align: center;
+  background-color: #60dfed;
+  border: 16px solid #000;
+  border-top-width: 20px;
+  border-bottom-width: 20px;
+  border-radius: 30px;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#parallax-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.parallax-view {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.parallax-view img {
+  position: absolute;
+}
+
+.parallax-view .cloud {
+  bottom: -5%;
+  left: -10%;
+  width: 120%;
+}
+
+.parallax-view .whale {
+  top: 40%;
+  right: -2%;
+  width: 100%;
+  max-width: 900px;
+}
+
+.parallax-view .paper-plane-1 {
+  top: 4%;
+  left: 4%;
+  width: 120px;
+}
+
+#synopsis {
+  position: absolute;
+  top: 120px;
+  left: 0;
+  width: 30%;
+  padding: 16px;
+  color: #445e68;
+  line-height: 2.5;
+  letter-spacing: 2px;
+  text-align: left;
+}
+
+#extend-info {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 70%;
+  height: 100%;
+}
+
+#extend-info .info-item {
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  font-size: 12px;
+  font-weight: bolder;
+  line-height: 90px;
+  letter-spacing: 2px;
+  background: #fafce4;
+  border-radius: 50%;
+  transition: box-shadow .3s ease-in-out;
+  cursor: pointer;
+}
+
+#extend-info .info-item:hover {
+  box-shadow: 0 0 0 8px #fcfee6;
+}
+
+#extend-info .github {
+  top: 30%;
+  left: 10%;
+}
+
+#extend-info .blog {
+  top: 10%;
+  left: 30%;
+}
+
+#extend-info .instagram {
+  top: 30%;
+  left: 50%;
+}
+
+#extend-info .music {
+  top: 10%;
+  left: 70%;
+}
+</style>
+<body>
+  <section id="app">
+    <ul id="parallax-wrapper">
+      <li class="parallax-view" data-depth="0.2">
+        <img class="cloud" src="./assets/cloud.png">
+      </li>
+      <li class="parallax-view" data-depth="0.3">
+        <img class="whale" src="./assets/whale.png">
+      </li>
+      <div class="parallax-view" data-depth="0.4">
+        <img class="paper-plane-1" src="./assets/paper_plane1.png">
+      </div>
+    </ul>
+    <pre id="synopsis">
+      嗯...
+      最近想做条咸鱼
+      翻着白漂到哪就在哪晾着
+      晒着太阳，发干发臭
+      然后变得刀枪不入
+      哈哈，咸鱼是最强的
+
+      背景的鲸鱼出自<a href="https://www.gracg.com/p1737074143342970" target="_blank">邦乔彦</a>的<a target="_blank" href="https://kinglisky.github.io/blog/2015/11/17/Letter/">《Letter》</a>
+      特别喜欢那种天空大鱼的感觉
+    </pre>
+    <div id="extend-info">
+      <a class="info-item blog" href="https://ierii.com" target="_blank">BLOG</a>
+      <a class="info-item github" href="https://github.com/kinglisky" target="_blank">GITHUB</a>
+      <a class="info-item music" href="https://music.163.com/#/user/home?id=83023969" target="_blank">MUSIC</a>
+      <a class="info-item instagram" href="https://www.instagram.com/kinglysky/" target="_blank">INS</a>
+    </div>
+  </section>
+  <script src="https://npm.elemecdn.com/parallax-js@3.1.0/dist/parallax.min.js"></script>
+  <script>
+  (function () {
+  var parallaxInstance = new window.Parallax(document.getElementById('parallax-wrapper'))
+  })()
+  </script>
+</body>
+</html>
